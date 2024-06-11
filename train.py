@@ -147,7 +147,7 @@ if __name__ == "__main__":
     dataset_config.name = args.dataset
     print("show config")
     for arg in vars(config):
-        print(f"{arg:>15}: {getattr(config, arg):>30}")
+        print(f"{str(arg):>15}: {str(getattr(config, arg)):>30}")
     print()
 
     # Create the directories if not exist
