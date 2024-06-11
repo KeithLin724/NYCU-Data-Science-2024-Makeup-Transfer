@@ -38,6 +38,14 @@ For Tensorboard:
 
 `tensorboard --logdir runs`, then open `http://localhost:6006/`
 
+Run score :
+
+`python ./run_score.py --checkpoint "{model path}" --add_128 {resize image to 128}`
+
+Example :
+
+`python ./run_score.py --checkpoint "model/83_780/83_780_G.pth" --add_128 True`
+
 ---
 
 ### TA readme
