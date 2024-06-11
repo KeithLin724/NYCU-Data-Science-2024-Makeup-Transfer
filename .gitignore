@@ -1,0 +1,12 @@
+.vscode/
+mt_removal/
+mtdataset/
+__pycache__/
+.venv/
+.gitignore/
+backup/
+runs/
+visulization/
+snapshot/
+model/
+out/
