@@ -30,6 +30,20 @@ Second :
 
 In this code we using `mtdataset`
 
+Structure like :
+
+```txt
+./mtdataset
+├── images
+│   ├── makeup
+│   └── non-makeup
+└── parsing
+    ├── makeup
+    └── non-makeup
+```
+
+---
+
 ### Training Code
 
 `python train.py --data_path {your dataset path}`
