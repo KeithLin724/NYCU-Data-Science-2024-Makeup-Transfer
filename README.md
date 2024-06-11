@@ -1,8 +1,18 @@
 # NYCU Data Science 2024 - HW5 Makeup Transfer Using BeautyGAN
 
+## written BY KYLiN
+
 BeautyGAN: Instance-level Facial Makeup Transfer with Deep Generative Adversarial Network
 
 ---
+
+## Platform
+
+![Ubuntu](https://ziadoua.github.io/m3-Markdown-Badges/badges/Ubuntu/ubuntu1.svg) ![Window](https://ziadoua.github.io/m3-Markdown-Badges/badges/Windows/windows2.svg)
+
+### Tools
+
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![Pytorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white) ![jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white) ![numpy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white) ![pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)
 
 ## Requirements
 
@@ -20,6 +30,20 @@ Second :
 
 In this code we using `mtdataset`
 
+Structure like :
+
+```txt
+./mtdataset
+├── images
+│   ├── makeup
+│   └── non-makeup
+└── parsing
+    ├── makeup
+    └── non-makeup
+```
+
+---
+
 ### Training Code
 
 `python train.py --data_path {your dataset path}`
@@ -27,6 +51,14 @@ In this code we using `mtdataset`
 For Tensorboard:
 
 `tensorboard --logdir runs`, then open `http://localhost:6006/`
+
+Run score :
+
+`python ./run_score.py --checkpoint "{model path}" --add_128 {resize image to 128}`
+
+Example :
+
+`python ./run_score.py --checkpoint "model/83_780/83_780_G.pth" --add_128 True`
 
 ---
 
@@ -48,8 +80,20 @@ non-makeup/xfsy_0458.png and makeup/vHX44.png are the first line of nomakeup_tes
 
 ---
 
+### Best score
+
+```txt
++------------+-------------+----------+-----------+
+| Approach   |   Precision |   Recall |   Overall |
++============+=============+==========+===========+
+| mt         |       0.959 |    0.001 |     0.029 |
++------------+-------------+----------+-----------+
+```
+
+---
+
 >### Acknowledgement
 >
 >This code is heavily based on [BeautyGAN - Offical Pytorch Implementation](https://github.com/wtjiang98/BeautyGAN_pytorch) and [BeautyGAN-PyTorch-reimplementation](https://github.com/thaoshibe/BeautyGAN-PyTorch-reimplementation). Thanks `wtjiang98`,`thaoshibe` so much to make his work available 🙏🙏🙏
-
 > Package : [Poetry](./https://python-poetry.org/)
+> Reference : [TTUR](https://cugtyt.github.io/blog/2020/0206.html)
