@@ -73,5 +73,5 @@ non-makeup/xfsy_0458.png and makeup/vHX44.png are the first line of nomakeup_tes
 >### Acknowledgement
 >
 >This code is heavily based on [BeautyGAN - Offical Pytorch Implementation](https://github.com/wtjiang98/BeautyGAN_pytorch) and [BeautyGAN-PyTorch-reimplementation](https://github.com/thaoshibe/BeautyGAN-PyTorch-reimplementation). Thanks `wtjiang98`,`thaoshibe` so much to make his work available 🙏🙏🙏
-
 > Package : [Poetry](./https://python-poetry.org/)
+> Reference : [TTUR](https://cugtyt.github.io/blog/2020/0206.html)
